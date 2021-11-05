@@ -81,4 +81,5 @@ public class DemoFillFormTests {
     void checkValue (String key, String value) {
         $$(".table-responsive td").find(text(key)).sibling(0).shouldHave(exactText(value));
     }
+
 }
