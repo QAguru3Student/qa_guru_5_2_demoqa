@@ -24,7 +24,6 @@ public class DemoFillFormTests {
     String city = "Agra";
     String filename = "avatar.jpg";
 
-
     @Test
     void openPageTest(){
         openPage();
@@ -44,19 +43,15 @@ public class DemoFillFormTests {
         $("#userEmail").setValue(email);
         $("#gender-radio-1").parent().click();
         $("#userNumber").setValue(mobileNumber);
-
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption(this.year);
         $(".react-datepicker__month-select").selectOption(this.month);
         $(".react-datepicker__day--0" + this.day).click();
-
         $("#subjectsInput").setValue(subjects).pressEnter();
         $("#hobbies-checkbox-1").parent().click();
         $("#hobbies-checkbox-3").parent().click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/" + filename));
-
         $("#currentAddress").setValue(address).scrollTo();
-
         $("#state").parent().click();
         $(byText(state)).click();
         $("#city").click();
