@@ -9,13 +9,13 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DemoFillFormTests {
-    String firstName = "Anton";
+    String firstName = "Semyon";
     String lastName = "Babushkin";
     String email = "ab@mail.ru";
     String gender = "male";
     String mobileNumber = "9242832027";
     String year = "1987";
-    String month = "October";
+    String month = "November";
     String day = "24";
     String[] hobbies = {"Sports", "Music"};
     String subjects = "Maths";
@@ -23,7 +23,6 @@ public class DemoFillFormTests {
     String state = "Uttar Pradesh";
     String city = "Agra";
     String filename = "avatar.jpg";
-
 
     @Test
     void openPageTest(){
@@ -44,19 +43,15 @@ public class DemoFillFormTests {
         $("#userEmail").setValue(email);
         $("#gender-radio-1").parent().click();
         $("#userNumber").setValue(mobileNumber);
-
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption(this.year);
         $(".react-datepicker__month-select").selectOption(this.month);
         $(".react-datepicker__day--0" + this.day).click();
-
         $("#subjectsInput").setValue(subjects).pressEnter();
         $("#hobbies-checkbox-1").parent().click();
         $("#hobbies-checkbox-3").parent().click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/" + filename));
-
         $("#currentAddress").setValue(address).scrollTo();
-
         $("#state").parent().click();
         $(byText(state)).click();
         $("#city").click();
