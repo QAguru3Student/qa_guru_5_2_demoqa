@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class DemoFillFormTests {
-    String firstName = "Anton";
+    String firstName = "Semyon";
     String lastName = "Babushkin";
     String email = "ab@mail.ru";
     String gender = "male";
